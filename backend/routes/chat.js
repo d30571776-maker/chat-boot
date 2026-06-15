@@ -15,7 +15,7 @@ const chatbotApis = {
   },
   claude: async (message, apiKey) => {
     const response = await axios.post('https://api.anthropic.com/v1/messages', {
-      model: 'claude-3-sonnet-20240229',
+      model: 'claude-haiku-4-5-20251001',
       max_tokens: 1024,
       messages: [{ role: 'user', content: message }]
     }, {
