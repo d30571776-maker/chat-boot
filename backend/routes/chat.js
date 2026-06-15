@@ -15,7 +15,7 @@ const chatbotApis = {
   },
   claude: async (message, apiKey) => {
     const response = await axios.post('https://api.anthropic.com/v1/messages', {
-      model: 'claude-haiku-4-5-20251001',
+      model: 'claude-3-sonnet-20240229',
       max_tokens: 1024,
       messages: [{ role: 'user', content: message }]
     }, {
@@ -38,7 +38,7 @@ const chatbotApis = {
     return response.data[0].generated_text;
   },
   cohere: async (message, apiKey) => {
-    const response = await axios.post('https://api.cohere.ai/v1/chat', {
+    const response = await axios.post('https://api .cohere.ai/v1/chat', {
       message: message
     }, {
       headers: { Authorization: `Bearer ${apiKey}` }
